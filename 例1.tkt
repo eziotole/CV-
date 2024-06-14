@@ -1,0 +1,6 @@
+input_image = Image.open(requests.get("http://images.cocodataset.org/val2017/000000467848.jpg", stream=True).raw)
+input_image
+
+vocab = "black pickup truck, pickup truck; blue sky, sky"
+label_list = ["COCO", "ADE", "LVIS"]
+inference(input_image, vocab, label_list)
