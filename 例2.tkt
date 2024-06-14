@@ -1,0 +1,6 @@
+input_image = Image.open(requests.get("https://web.eecs.umich.edu/~fouhey/fun/desk/desk.jpg", stream=True).raw)
+input_image
+
+vocab = ""
+label_list = ["COCO", "ADE", "LVIS"]
+inference(input_image, vocab, label_list)
